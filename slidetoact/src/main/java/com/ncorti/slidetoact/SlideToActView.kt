@@ -141,6 +141,7 @@ class SlideToActView(context: Context,
 
     /** The icon for the drawable */
     private var mIcon: Int = R.drawable.ic_arrow
+    private var defaultMargin: Int = 8
 
     /* -------------------- PAINT & DRAW -------------------- */
     /** Paint used for outer elements */
@@ -198,7 +199,7 @@ class SlideToActView(context: Context,
             isLocked = layoutAttrs.getBoolean(R.styleable.SlideToActView_slider_locked, false)
 
             mTextSize = layoutAttrs.getDimensionPixelSize(R.styleable.SlideToActView_text_size, resources.getDimensionPixelSize(R.dimen.default_text_size))
-            mOriginAreaMargin = layoutAttrs.getDimensionPixelSize(R.styleable.SlideToActView_area_margin, resources.getDimensionPixelSize(R.dimen.default_area_margin))
+            mOriginAreaMargin = layoutAttrs.getDimensionPixelSize(R.styleable.SlideToActView_area_margin, resources.getDimensionPixelSize(defaultMargin))
             mActualAreaMargin = mOriginAreaMargin
 
             mIcon = layoutAttrs.getResourceId(R.styleable.SlideToActView_slider_icon, R.drawable.ic_arrow)
